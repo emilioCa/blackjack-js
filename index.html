@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>BlackJack JS</title>
+</head>
+
+<body>
+
+    <header class="titulo">BlackJack</header>
+
+    <div class="row mt-2">
+        <div class="col text-center">
+
+            <button id="btnNuevo" class="btn btn-success">Nuevo Juego</button>
+            <button id="btnSolicitar" class="btn btn-primary" disabled="disabled">Pedir Carta</button>
+            <button id="btnDetener" class="btn btn-danger" disabled="disabled">Detener</button>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Jugador -->
+        <div class="row">
+            <div class="col">
+
+                <h2>Jugador - <small>0</small></h2>
+                <div id="cartas-jugador" class="divCartas"></div>
+
+            </div>
+        </div>
+
+        <!-- Computador -->
+        <div class="row mt-3">
+            <div class="col">
+
+                <h2>Máquina - <small>0</small></h2>
+                <div id="cartas-maquina" class="divCartas"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/underscore-min.js"></script>
+    <script src="assets/js/juego.min.js"></script>
+    <script>
+        document.querySelector('#btnNuevo').addEventListener('click', () => {
+            miModulo.nuevoJuego();
+        });
+    </script>
+</body>
+
+</html>
